@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Planètes du Système Solaire</title>
+    <link rel="stylesheet" href="style.css">
+    
+   
+    <style>
+        
+        /* Alignement du header */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        header img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid var(--accent-color);
+            box-shadow: 0 0 20px rgba(233, 69, 96, 0.6);
+            flex-shrink: 0;
+        }
+
+        header h1 {
+            background: rgba(233, 69, 96, 0.8);
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(233, 69, 96, 0.4);
+            margin: 0;
+        }
+
+        .planet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .planet-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .planet-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(233, 69, 96, 0.3);
+        }
+
+        .planet-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .planet-card-content {
+            padding: 20px;
+        }
+
+        .planet-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .planet-card p {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        .action-buttons {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            border-left: 4px solid var(--accent-color);
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .info-box strong {
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <img src="https://img.freepik.com/fotos-premium/ilustraciones-planetas-sistema-solar-celeste-fondo-cielo-oscuro_1182565-10873.jpg" alt="Système Solaire">
+        <h1>Les Planètes du Système Solaire</h1>
+    </header>
+
+    
+    <div class="qr-code">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=http://localhost:8000/index.html%23contact" alt="QR Code Page Web">
+    </div>
+
+    
+    <nav>
+        <ul>
+            <li><a href="#presentation">Présentation</a></li>
+            <li><a href="#planetes">Planètes</a></li>
+            <li><a href="#tableau">Comparaison</a></li>
+            <li><a href="#faits">Faits Intéressants</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    
+    <main>
+        
+        <section id="presentation">
+            <h2>Présentation</h2>
+            <article>
+                <h3>Bienvenue dans notre exploration du Système Solaire</h3>
+                <p>Le Système Solaire est un ensemble d'objets astronomiques en orbite autour du Soleil. Il s'est formé il y a environ 4,6 milliards d'années à partir de l'effondrement gravitationnel d'une région dans un grand nuage moléculaire.</p>
+                <div class="info-box">
+                    <strong>Le Soleil</strong> est une étoile de type spectral G2, composée principalement d'hydrogène et d'hélium. Il représente 99,86% de la masse totale du Système Solaire.
+                </div>
+                <p>Notre Système Solaire contient 8 planètes, des planètes naines, des astéroïdes, des comètes et d'autres petits corps célestes. Les planètes sont divisées en deux catégories : les planètes telluriques (rocheuses) et les planètes gazeuses.</p>
+            </article>
+        </section>
+
+        
+        <section id="planetes">
+            <h2>Les Planètes</h2>
+            
+            <div class="planet-grid">
+                <!-- MERCURE -->
+                <article class="planet-card">
+                    <img src="https://img.generation-nt.com/mercure-surface_01C2012C01422922.jpg" alt="Mercure">
+                    <div class="planet-card-content">
+                        <h3>Mercure</h3>
+                        <p>La plus petite planète du Système Solaire et la plus proche du Soleil. Mercure est une planète tellurique caractérisée par des températures extrêmes.</p>
+                    </div>
+                </article>
+
+                <!-- VENUS -->
+                <article class="planet-card">
+                    <img src="https://cdn.mos.cms.futurecdn.net/BSPnH7exyqzuxPxtyt3bbh.jpg" alt="Vénus">
+                    <div class="planet-card-content">
+                        <h3>Vénus</h3>
+                        <p>Similaire à la Terre en taille, Vénus est cependant une enfer infernal avec une atmosphère dense de dioxyde de carbone et un effet de serre extrême.</p>
+                    </div>
+                </article>
+
+                <!-- TERRE -->
+                <article class="planet-card">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.Qkpjpv2x3Gi8lkl8qEOUuwHaFS?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Terre">
+                    <div class="planet-card-content">
+                        <h3>Terre</h3>
+                        <p>Notre planète natale, la seule connue pour abriter la vie. La Terre est la troisième planète du Système Solaire et la plus grande des planètes telluriques.</p>
+                    </div>
+                </article>
+
+                <!-- MARS -->
+                <article class="planet-card">
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.H704DKDIA-Lxi5Zz38lG0gHaFj?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Mars">
+                    <div class="planet-card-content">
+                        <h3>Mars</h3>
+                        <p>Connue comme la "Planète Rouge" en raison de l'oxyde de fer présent à sa surface, Mars est le centre d'une grande attention scientifique.</p>
+                    </div>
+                </article>
+
+                <!-- JUPITER -->
+                <article class="planet-card">
+                    <img src="https://starwalk.space/gallery/images/jupiter-guide/1920x1080.jpg" alt="Jupiter">
+                    <div class="planet-card-content">
+                        <h3>Jupiter</h3>
+                        <p>La plus grande planète du Système Solaire. Jupiter est une géante gazeuse avec une Grande Tache Rouge caractéristique et au moins 79 lunes.</p>
+                    </div>
+                </article>
+
+                <!-- SATURNE -->
+                <article class="planet-card">
+                    <img src="https://img.freepik.com/premium-photo/saturn-planet-space-celestial-cosmic-solar-system-astronomy-universe-galactic-planetary_598925-5200.jpg" alt="Saturne">
+                    <div class="planet-card-content">
+                        <h3>Saturne</h3>
+                        <p>Célèbre pour ses magnifiques anneaux, Saturne est une géante gazeuse avec plus de 80 lunes connues.</p>
+                    </div>
+                </article>
+
+                <!-- URANUS -->
+                <article class="planet-card">
+                    <img src="https://wallpaperaccess.com/full/415191.png" alt="Uranus">
+                    <div class="planet-card-content">
+                        <h3>Uranus</h3>
+                        <p>Une géante de glace qui tourne sur son côté. Uranus a une atmosphère composée principalement de méthane.</p>
+                    </div>
+                </article>
+
+                <!-- NEPTUNE -->
+                <article class="planet-card">
+                    <img src="https://cherry.img.pmdstatic.net/fit/https.3A.2F.2Fimg.2Emaxisciences.2Ecom.2Fs3.2Ffrgsd.2F1280.2Fneptune.2Fdefault_2022-09-12_c5549183-c81f-40cd-ab56-e43ceeb08f25.2Ejpeg/1200x675/quality/80/representation-de-neptune-la-huitieme-planete-du-systeme-solaire.jpg" alt="Neptune">
+                    <div class="planet-card-content">
+                        <h3>Neptune</h3>
+                        <p>La planète la plus éloignée du Soleil. Neptune est une géante de glace avec des vents extrêmement puissants.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        
+        <section id="tableau">
+            <h2>Tableau Comparatif</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Planète</th>
+                            <th>Diamètre (km)</th>
+                            <th>Distance du Soleil (millions km)</th>
+                            <th>Durée de Rotation</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Mercure</strong></td>
+                            <td>4 879</td>
+                            <td>57,9</td>
+                            <td>59 jours</td>
+                            <td>Tellurique</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vénus</strong></td>
+                            <td>12 104</td>
+                            <td>108,2</td>
+                            <td>243 jours</td>
+                            <td>Tellurique</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Terre</strong></td>
+                            <td>12 742</td>
+                            <td>149,6</td>
+                            <td>24 heures</td>
+                            <td>Tellurique</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mars</strong></td>
+                            <td>6 779</td>
+                            <td>227,9</td>
+                            <td>24,6 heures</td>
+                            <td>Tellurique</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Jupiter</strong></td>
+                            <td>139 820</td>
+                            <td>778,5</td>
+                            <td>10 heures</td>
+                            <td>Gazeuse</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Saturne</strong></td>
+                            <td>116 460</td>
+                            <td>1 434</td>
+                            <td>10,7 heures</td>
+                            <td>Gazeuse</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Uranus</strong></td>
+                            <td>50 724</td>
+                            <td>2 871</td>
+                            <td>17 heures</td>
+                            <td>Glace</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Neptune</strong></td>
+                            <td>49 244</td>
+                            <td>4 495</td>
+                            <td>16 heures</td>
+                            <td>Glace</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        
+        <section id="faits">
+            <h2>Faits Intéressants</h2>
+            <article>
+                <h3>Découvertes et Exploration</h3>
+                <p><strong>Planètes Visibles à l'œil nu :</strong> Mercure, Vénus, Mars, Jupiter et Saturne peuvent être observées sans télescope. Les trois autres planètes (Terre, Uranus et Neptune) ont été découvertes ultérieurement.</p>
+                
+                <p><strong>Lunes :</strong> Seules Mercure et Vénus n'ont pas de lunes naturelles. Jupiter en possède le plus grand nombre avec au moins 79 lunes confirmées.</p>
+                
+                <p><strong>Ceinture d'astéroïdes :</strong> Entre Mars et Jupiter se trouve une ceinture contenant des millions d'astéroïdes, reliques de la formation du Système Solaire.</p>
+                
+                <p><strong>Naine blanche :</strong> Après environ 5 milliards d'années, notre Soleil deviendra une naine blanche, libérant ses couches externes et formant une nébuleuse planétaire.</p>
+            </article>
+
+            <article>
+                <h3>Structures Remarquables</h3>
+                <p><strong>Les Anneaux de Saturne :</strong> Composés principalement de glaçons et de roches, les anneaux s'étendent sur plus de 282 000 km.</p>
+                
+                <p><strong>La Grande Tache Rouge de Jupiter :</strong> Un anticyclone persistant observé depuis au moins 350 ans, suffisamment grand pour contenir trois Terres.</p>
+                
+                <p><strong>Le Volcanisme :</strong> Io, une lune de Jupiter, possède les volcans les plus actifs du Système Solaire.</p>
+            </article>
+        </section>
+
+        
+        <section id="contact">
+            <h2>Nous Contacter</h2>
+            <article>
+                <h3>Envoyez-nous un Message</h3>
+                <p>Vous avez des questions sur le Système Solaire? Vous souhaitez partager vos observations? N'hésitez pas à nous contacter!</p>
+                
+                <div class="action-buttons">
+                    <a href="manal.marouane@esi.ac.ma" class="btn btn-email">📧 Envoyer un Email</a>
+                    <a href="#presentation" class="btn btn-primary">⬆ Haut de la Page</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    
+    <footer>
+        <p>© 2026 Page Éducative - Système Solaire. Tous droits réservés.</p>
+        
+        <div class="copyright">
+            © Manal Marouane - 2026
+        </div>
+
+        
+        <pre class="ascii-art">
+ __  __  ____  _   _  ____     ___   ____  ___  __  __ 
+|  \/  |/ __ \| \ | |/ __ \   |_ _| / __ \|  \/  ||  __|
+|  /\  |  ___  |  \| |  ___||   | | |  ___||   /\  | |__  
+|_/  \_|_|  |_|_|\__|_|     \__\___\|_|   |_|\/  \_|____|
+        </pre>
+
+        <p>Explorez les merveilles de l'univers</p>
+    </footer>
+
+    <!-- SCRIPT JAVASCRIPT POUR LE BOUTON SCROLL TOP -->
+    <script>
+        // Affiche/masque le bouton de remontée
+        window.addEventListener('scroll', function() {
+            const scrollBtn = document.querySelector('.scroll-top');
+            if (window.pageYOffset > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
